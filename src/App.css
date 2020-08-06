@@ -1,10 +1,38 @@
 *{
     margin: 0;
 }
+body{
+    background-color: #f5f6fa;
+}
+
+.app{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+}
+
+.app__left{
+    flex: 0.5;
+}
 
 .app__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0.5rem 1rem;
+}
+
+.app__stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 990px){
+    .app{
+        flex-direction: column;
+    }
+    .app__right{
+        padding-top: 5rem;
+    }
 }
