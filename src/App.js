@@ -5,6 +5,7 @@ import './App.css';
 
 //Material UI
 import { Card, CardContent, Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -66,9 +67,22 @@ function App() {
           </FormControl>
         </div>
         <div className="app__stats">
-          <Cards title="Total Cases" cases={countryInfo.todayCases} total={countryInfo.cases}></Cards>
-          <Cards title="Recovered Cases" cases={countryInfo.todayRecovered} total={countryInfo.recovered}></Cards>
-          <Cards title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths}></Cards>
+          <Grid container spacing={3}>
+            <Grid item md={6} xs={12}>
+            <Cards className="infected" title="Total Cases" cases={countryInfo.todayCases} total={countryInfo.cases}></Cards>
+            </Grid>
+            <Grid item md={6} xs={12}>
+            <Cards className="recovered" title="Recovered Cases" cases={countryInfo.todayRecovered} total={countryInfo.recovered}></Cards>
+            </Grid>
+            <Grid item md={6} xs={12}>
+            <Cards className="deaths" title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths}></Cards>
+            </Grid>
+            <Grid item md={6} xs={12}>
+            <Cards className="active" title="Active Cases" cases={countryInfo.active} total={countryInfo.active}></Cards>
+            </Grid>
+          </Grid>
+          
+          
         </div>
       </div>
       <div className="app__right">
