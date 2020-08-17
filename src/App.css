@@ -44,6 +44,21 @@ body{
     align-items: center;
 }
 
+.app__information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.graph__container{
+    margin-top: 2rem;
+}
+
+.country__name {
+    margin-left: 0.9rem;
+}
+
 @media screen and (max-width: 990px){
     .app{
         flex-direction: column;
