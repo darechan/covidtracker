@@ -145,7 +145,7 @@ function App() {
             )
           }
         >
-          Play Game
+          KILL COVID?!
         </div>
       </div>
     </div>
