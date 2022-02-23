@@ -1,69 +1,83 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
-body{
-    background-color: #f5f6fa;
+body {
+  background-color: #f5f6fa;
 }
 
-.app{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 3rem;
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
 }
 
 .infected {
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  border-bottom: 10px solid rgba(255, 0, 0, 0.5);
 }
 
 .recovered {
-    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+  border-bottom: 10px solid rgba(0, 255, 0, 0.5);
 }
 
 .deaths {
-    border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.5);
 }
 
 .active {
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+  border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 
-.app__left{
-    flex: 0.5;
+.app__left {
+  flex: 0.5;
 }
 
-.app__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5rem 1rem;
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1rem;
 }
 
-.app__stats{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.app__information{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.app__information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.graph__container{
-    margin-top: 2rem;
+.graph__container {
+  margin-top: 2rem;
 }
 
 .country__name {
-    margin-left: 0.9rem;
+  margin-left: 0.9rem;
+}
+.button {
+  color: #99c0ff;
+  background-color: #2c3575;
+  padding: 15px 17px;
+  border: none;
+  border-radius: 25px;
+  font-size: large;
+  font-weight: bold;
+  width: 50%;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width: 990px){
-    .app{
-        flex-direction: column;
-    }
-    .app__right{
-        padding-top: 5rem;
-    }
+@media screen and (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+  .app__right {
+    padding-top: 5rem;
+  }
 }
