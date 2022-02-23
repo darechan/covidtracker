@@ -6,7 +6,7 @@ import Graph from "./components/Graph/Graph";
 import "./App.css";
 import { sortData } from "./utilities/util";
 //Material UI
-import { Card, CardContent, Typography, Button } from "@material-ui/core";
+import { Card, CardContent } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setCountryInfo(data);
+        setCasesType("cases");
       });
   }, []);
   useEffect(() => {
@@ -70,7 +71,12 @@ function App() {
               <MenuItem value="worldwide">WorldWide</MenuItem>
               {countries.map((country) => (
                 <MenuItem value={country.value}>
-                  <img src={country.flag} width="25px" height="15px"></img>{" "}
+                  <img
+                    src={country.flag}
+                    width="25px"
+                    height="15px"
+                    alt="flags"
+                  ></img>{" "}
                   <span className="country__name">{country.name}</span>{" "}
                 </MenuItem>
               ))}
